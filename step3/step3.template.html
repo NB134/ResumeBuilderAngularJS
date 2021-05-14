@@ -10,16 +10,16 @@
       <div>
         <md-input-container>
           <label> Designation </label>
-          <input type="text" />
+          <input type="text" ng-model="User.Experience.designation" />
         </md-input-container>
         <md-input-container>
           <label> Organisation </label>
-          <input type="text" />
+          <input type="text" ng-model="User.Experience.Organisation" />
         </md-input-container>
         <md-input-container>
           <label>From </label>
           <md-datepicker
-            ng-model="ctrl.myDate"
+            ng-model="User.Experience.sDate"
             md-placeholder="Enter date"
             md-mode="month"
           ></md-datepicker>
@@ -27,29 +27,29 @@
         <md-input-container>
           <label>To </label>
           <md-datepicker
-            ng-model="ctrl.myDate"
+            ng-model="User.Experience.eDate"
             md-placeholder="Enter date"
             md-mode="month"
           ></md-datepicker>
         </md-input-container>
       </div>
-      <md-button class="md-fab md-primary md-mini margin-0">+</md-button>
+      <!-- <md-button class="md-fab md-primary md-mini margin-0" ng-click="AddField()">+</md-button> -->
     </div>
     <div class="projectsContainer group">
         <md-content>Projects</md-content>
         <div>
             <md-input-container>
               <label> Title </label>
-              <input type="text" />
+              <input type="text" ng-model="User.project.title"/>
             </md-input-container>
             <md-input-container>
               <label> Description </label>
-              <textarea></textarea>
+              <textarea ng-model="User.project.description"></textarea>
             </md-input-container>
             <md-input-container>
               <label>From </label>
               <md-datepicker
-                ng-model="ctrl.myDate"
+                ng-model="User.project.sDate"
                 md-placeholder="Enter date"
                 md-mode="month"
               ></md-datepicker>
@@ -57,30 +57,30 @@
             <md-input-container>
               <label>To </label>
               <md-datepicker
-                ng-model="ctrl.myDate"
+                ng-model="User.project.eDate"
                 md-placeholder="Enter date"
                 md-mode="month"
               ></md-datepicker>
             </md-input-container>
           </div>
-          <md-button class="md-fab md-primary md-mini margin-0">+</md-button>
+          <!-- <md-button class="md-fab md-primary md-mini margin-0" ng-click="AddField()">+</md-button> -->
     </div>
     <div class="achievementsContainer group">
         <md-content>Achievements</md-content>
         <div>
             <md-input-container>
               <label> Title </label>
-              <input type="text" />
+              <input type="text" ng.model="User.achievements.title" />
             </md-input-container>
             <md-input-container>
               <label> Description </label>
-              <textarea></textarea>
+              <textarea ng-model="User.achievements.description"></textarea>
             </md-input-container>
           </div>
-          <md-button class="md-fab md-primary md-mini margin-0">+</md-button>
+          <!-- <md-button class="md-fab md-primary md-mini margin-0" ng-click="AddField()">+</md-button> -->
     </div>
     <div layout="row" layout-align="center" >
-        <md-button class="md-primary md-raised md-block margin-0">Submit</md-button>
+        <md-button class="md-primary md-raised md-block margin-0" ng-click="submitData()">Submit</md-button>
     </div>
   </form>
 </div>

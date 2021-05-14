@@ -5,21 +5,21 @@
         <md-button class="md-raised md-primary" ng-href="#!step2">Next</md-button>
     </div>
     <form class="md-padding" novalidate layout="column" >
-        
         <md-input-container>
             <label>Name</label>
-            <input type="text">
+            <input type="text" ng-model="User.name">
           </md-input-container>
           <md-input-container>
             <label>Contact No</label>
-            <input type="number">
+            <input type="number" ng-model="User.number">
+            <p>{{User.number}}</p>
           </md-input-container>
           <md-input-container>
             <label>Email</label>
-            <input type="email">
+            <input type="email" ng-model="User.email">
           </md-input-container>
-          <div layout="row" layout-align="center" >
-            <md-button class="md-primary md-raised md-block margin-0">Submit</md-button>
+          <div layout="row" layout-align="center">
+            <md-button class="md-primary md-raised md-block margin-0" ng-click="submitData()" >Submit</md-button>
         </div>
     </form>
 </div>

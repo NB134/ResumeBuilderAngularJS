@@ -1,4 +1,5 @@
 let app=angular.module("ResumeBuilder",['ngMaterial','ngRoute']);
+
 app.config(function($routeProvider){
     $routeProvider
     .when("/",{
@@ -12,5 +13,9 @@ app.config(function($routeProvider){
     .when("/step3",{
         templateUrl:"./step3/step3.template.html",
         controller : "step3"
+    })
+    .when("/resume",{
+        templateUrl:"./resumeView/resume.template.html",
+        controller:"resume"
     });
 });

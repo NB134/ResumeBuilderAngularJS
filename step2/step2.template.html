@@ -8,38 +8,34 @@
   <form class="md-padding" novalidate layout="column">
     <md-input-container>
       <label>Skills</label>
-      <textarea></textarea>
+      <textarea ng-model="User.skills"></textarea>
     </md-input-container>
     <md-input-container>
       <label>Highest Degree(completed/in progress)</label>
-      <input type="text" />
+      <input type="text" ng-model="User.Degree" />
     </md-input-container>
     <md-input-container>
       <label>Institute Name</label>
-      <input type="text" />
+      <input type="text" ng-model="User.InstituteName" />
     </md-input-container>
     <md-input-container>
       <label>Institute Location</label>
-      <input type="text" />
+      <input type="text" ng-model="User.InstituteLocation" />
     </md-input-container>
     <md-input-container>
       <label>GPA</label>
-      <input type="number" step="any" />
+      <input type="number" ng-model="User.GPA" step="any" />
     </md-input-container>
     <md-input-container>
       <label>Graduation Date</label>
       <md-datepicker
-        ng-model="ctrl.myDate"
         md-placeholder="Enter date"
         md-mode="month"
+        ng-model="User.Gdate"
       ></md-datepicker>
     </md-input-container>
-    <md-input-container>
-      <label>Email</label>
-      <input type="email" />
-    </md-input-container>
     <div layout="row" layout-align="center" >
-        <md-button class="md-primary md-raised md-block margin-0">Submit</md-button>
+        <md-button class="md-primary md-raised md-block margin-0" ng-click="submitData()">Submit</md-button>
     </div>
   </form>
 </div>

@@ -1,0 +1,62 @@
+
+<div class="resumeContainer" layout="column" layout-padding>
+    <div class="personalDetails">
+        <h1>{{dummyUser.name}}</h1>
+        <div class="details">
+            <md-content>
+                <md-icon class="mmaterial-icons-outlined">
+                    phone_iphone
+                    </md-icon>  {{dummyUser.number}}
+            </md-content>
+            <md-content>
+               <md-icon class="material-icons-outlined">
+                email
+                </md-icon>  {{dummyUser.email}}
+            </md-content>
+        </div>
+    </div>
+    <md-divider></md-divider>
+    <div class="skillsContainer">
+        <h1>Skills</h1>
+        {{dummyUser.skills}}
+    </div>
+    <md-divider></md-divider>
+    <div class="Degree">
+        <h1>Educational Qualifications</h1>
+        <md-content class="md-headline">{{dummyUser.Degree}}</md-content>
+        <md-content class="md-headline">{{dummyUser.InstituteName + ", "+dummyUser.InstituteLocation}}</md-content>
+        <md-content class="md-subhead">{{dummyUser.Gdate | date:"MMM, yyyy"}}</md-content>
+        <md-content>{{"GPA "+dummyUser.GPA}}</md-content>
+    </div>
+    <md-divider></md-divider>
+    <div class="Experience">
+        <h1>Experience</h1>
+        <md-content class="md-headline">{{dummyUser.Experience.designation}}</md-content>
+        <md-content class="md-headline">{{"at "+dummyUser.Experience.Organisation}}</md-content>
+        <md-content class="md-subhead">
+            {{dummyUser.Experience.sDate | date:"MMM, yyyy"}} - {{dummyUser.Experience.eDate | date:"MMM, yyyy"}}
+        </md-content>
+    </div>
+    <md-divider></md-divider>
+    <div class="Projects">
+        <h1>Projects</h1>
+        <md-content class="md-headline">
+            {{dummyUser.project.title}}
+        </md-content>
+        <md-content class="md-subhead">{{dummyUser.project.sDate | date:"MMM, yyyy"}} - {{dummyUser.project.eDate | date:"MMM, yyyy"}}</md-content>
+        <md-content>
+            {{dummyUser.project.description}}
+        </md-content>
+    </div>
+    <md-divider></md-divider>
+    <div class="Achievements">
+        <h1>Achievements</h1>
+        <span class="md-headline">
+            {{dummyUser.achievements.title}}
+        </span>
+        <md-content>
+            {{dummyUser.achievements.description}}
+        </md-content>
+    </div>
+    
+</div>
