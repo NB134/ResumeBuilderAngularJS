@@ -1,0 +1,86 @@
+<div class="Step3">
+  <h1>Experience</h1>
+  <div class="controlSection" layout="row" layout-align="space-between center">
+    <md-button class="md-raised md-primary" ng-href="#!step2">Prev</md-button>
+    <md-button class="md-raised md-primary" ng-href="" disabled>Next</md-button>
+  </div>
+  <form class="md-padding" novalidate  layout="column">
+    <div class="experienceContainer group">
+      <md-content>Experience</md-content>
+      <div>
+        <md-input-container>
+          <label> Designation </label>
+          <input type="text" />
+        </md-input-container>
+        <md-input-container>
+          <label> Organisation </label>
+          <input type="text" />
+        </md-input-container>
+        <md-input-container>
+          <label>From </label>
+          <md-datepicker
+            ng-model="ctrl.myDate"
+            md-placeholder="Enter date"
+            md-mode="month"
+          ></md-datepicker>
+        </md-input-container>
+        <md-input-container>
+          <label>To </label>
+          <md-datepicker
+            ng-model="ctrl.myDate"
+            md-placeholder="Enter date"
+            md-mode="month"
+          ></md-datepicker>
+        </md-input-container>
+      </div>
+      <md-button class="md-fab md-primary md-mini margin-0">+</md-button>
+    </div>
+    <div class="projectsContainer group">
+        <md-content>Projects</md-content>
+        <div>
+            <md-input-container>
+              <label> Title </label>
+              <input type="text" />
+            </md-input-container>
+            <md-input-container>
+              <label> Description </label>
+              <textarea></textarea>
+            </md-input-container>
+            <md-input-container>
+              <label>From </label>
+              <md-datepicker
+                ng-model="ctrl.myDate"
+                md-placeholder="Enter date"
+                md-mode="month"
+              ></md-datepicker>
+            </md-input-container>
+            <md-input-container>
+              <label>To </label>
+              <md-datepicker
+                ng-model="ctrl.myDate"
+                md-placeholder="Enter date"
+                md-mode="month"
+              ></md-datepicker>
+            </md-input-container>
+          </div>
+          <md-button class="md-fab md-primary md-mini margin-0">+</md-button>
+    </div>
+    <div class="achievementsContainer group">
+        <md-content>Achievements</md-content>
+        <div>
+            <md-input-container>
+              <label> Title </label>
+              <input type="text" />
+            </md-input-container>
+            <md-input-container>
+              <label> Description </label>
+              <textarea></textarea>
+            </md-input-container>
+          </div>
+          <md-button class="md-fab md-primary md-mini margin-0">+</md-button>
+    </div>
+    <div layout="row" layout-align="center" >
+        <md-button class="md-primary md-raised md-block margin-0">Submit</md-button>
+    </div>
+  </form>
+</div>

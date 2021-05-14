@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ResumeBuilder">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="node_modules/angular/angular.js" defer></script>
+    <script src="node_modules/angular-material/angular-material.js" defer></script>
+    <script src="node_modules/angular-route/angular-route.js" defer></script>
+    <script src="node_modules/angular-animate/angular-animate.js" defer></script>
+    <script src="node_modules/angular-aria/angular-aria.js" defer></script>
+    <script src="app.module.js" defer></script>
+    <script src="step1/step1.controller.js" defer></script>
+    <script src="step2/step2.controller.js" defer></script>
+    <script src="step3/step3.controller.js" defer></script>
+    <script src="https://kit.fontawesome.com/7550a607e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <md-nav-bar md-no-ink-bar="disableInkBar" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+        <md-nav-item md-nav-href="#/!" name="page1">
+            Resume Builder
+        </md-nav-item>
+        <md-nav-item md-nav-href="#!step2" name="page2">page2</md-nav-item>
+        <md-nav-item md-nav-href="#!step3" name="page3">page3</md-nav-item>
+      </md-nav-bar>
+      <div layout="column" class="MainContainer md-padding" >
+          <!-- <div class="stepNavContainer">
+              <div  layout="row" flex layout-align="space-around center" >
+                <div class="tab">
+                    <span class="tabIconContainer">
+                        <i class="fas fa-info-circle"></i>
+                    </span>
+                </div>
+                <div class="tab">
+                    <span class="tabIconContainer">
+                        <i class="far fa-user-circle"></i>
+                    </span>
+                </div>
+                <div class="tab">
+                    <span class="tabIconContainer">
+                        <i class="fas fa-check-circle"></i>
+                    </span>
+                </div>
+              </div>
+          </div> -->
+          <div ng-view="" class="ViewContainer">
+
+          </div>
+      </div>
+</body>
+</html>

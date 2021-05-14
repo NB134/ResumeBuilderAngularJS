@@ -1,0 +1,45 @@
+<div class="Step2">
+  <h1>Professional Details</h1>
+  <div class="controlSection" layout="row" layout-align="space-between center">
+    <md-button class="md-raised md-primary" ng-href="#!">Prev</md-button>
+    <md-button class="md-raised md-primary" ng-href="#!step3">Next</md-button>
+  </div>
+
+  <form class="md-padding" novalidate layout="column">
+    <md-input-container>
+      <label>Skills</label>
+      <textarea></textarea>
+    </md-input-container>
+    <md-input-container>
+      <label>Highest Degree(completed/in progress)</label>
+      <input type="text" />
+    </md-input-container>
+    <md-input-container>
+      <label>Institute Name</label>
+      <input type="text" />
+    </md-input-container>
+    <md-input-container>
+      <label>Institute Location</label>
+      <input type="text" />
+    </md-input-container>
+    <md-input-container>
+      <label>GPA</label>
+      <input type="number" step="any" />
+    </md-input-container>
+    <md-input-container>
+      <label>Graduation Date</label>
+      <md-datepicker
+        ng-model="ctrl.myDate"
+        md-placeholder="Enter date"
+        md-mode="month"
+      ></md-datepicker>
+    </md-input-container>
+    <md-input-container>
+      <label>Email</label>
+      <input type="email" />
+    </md-input-container>
+    <div layout="row" layout-align="center" >
+        <md-button class="md-primary md-raised md-block margin-0">Submit</md-button>
+    </div>
+  </form>
+</div>
