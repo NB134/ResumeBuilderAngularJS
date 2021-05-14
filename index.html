@@ -5,29 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
-    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.css">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
-    <script src="node_modules/angular/angular.js" defer></script>
-    <script src="node_modules/angular-material/angular-material.js" defer></script>
-    <script src="node_modules/angular-route/angular-route.js" defer></script>
-    <script src="node_modules/angular-animate/angular-animate.js" defer></script>
-    <script src="node_modules/angular-aria/angular-aria.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-messages.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.12/angular-material.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.2/angular-route.js" integrity="sha512-C92rntF0G0YH9kHzQlpux7ADvyKgyUwBqusewsHs/0ibOTNuHxFyVqDkI0BIcLGyP76fxgLOpMOLO6kmHCS/xA==" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/7550a607e0.js" crossorigin="anonymous"></script>
     <script src="app.module.js" defer></script>
     <script src="step1/step1.controller.js" defer></script>
     <script src="step2/step2.controller.js" defer></script>
     <script src="step3/step3.controller.js" defer></script>
     <script src="resumeView/resume.controller.js" defer></script>
-    <script src="https://kit.fontawesome.com/7550a607e0.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <md-nav-bar md-no-ink-bar="disableInkBar" md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
         <md-nav-item md-nav-href="#/!" name="page1">
             Resume Builder
         </md-nav-item>
-        <md-nav-item md-nav-href="#!step2" name="page2">page2</md-nav-item>
-        <md-nav-item md-nav-href="#!step3" name="page3">page3</md-nav-item>
+        <md-nav-item md-nav-href="#!about" name="page2">AboutUs</md-nav-item>
+        <md-nav-item md-nav-href="#!contact" name="page3">ContactUs</md-nav-item>
       </md-nav-bar>
       <div layout="column" class="MainContainer md-padding" >
           <!-- <div class="stepNavContainer">

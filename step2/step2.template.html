@@ -1,30 +1,55 @@
 <div class="Step2">
   <h1>Professional Details</h1>
   <div class="controlSection" layout="row" layout-align="space-between center">
-    <md-button class="md-raised md-primary" ng-href="#!">Prev</md-button>
-    <md-button class="md-raised md-primary" ng-href="#!step3">Next</md-button>
+    <md-button class="md-raised md-primary" ng-click="submitData(0)">Prev</md-button>
+    <md-button class="md-raised md-primary" ng-click="submitData(1)">Next</md-button>
   </div>
 
-  <form class="md-padding" novalidate layout="column">
+  <form name="userForm" class="md-padding" novalidate layout="column">
     <md-input-container>
       <label>Skills</label>
-      <textarea ng-model="User.skills"></textarea>
+      <textarea name="skills" ng-model="User.skills" required></textarea>
+      <div ng-messages="userForm.skills.$error">
+        <div ng-show="userForm.skills.$invalid" ng-message="required">
+         Pls write your skills
+         </div>
+      </div>
     </md-input-container>
     <md-input-container>
       <label>Highest Degree(completed/in progress)</label>
-      <input type="text" ng-model="User.Degree" />
+      <input name="degree" type="text" ng-model="User.Degree" required />
+      <div ng-messages="userForm.degree.$error">
+        <div ng-show="userForm.degree.$invalid" ng-message="required">
+         You degree is required.
+         </div>
+      </div>
     </md-input-container>
     <md-input-container>
       <label>Institute Name</label>
-      <input type="text" ng-model="User.InstituteName" />
+      <input name="InsName" type="text" ng-model="User.InstituteName" required />
+      <div ng-messages="userForm.InsName.$error">
+        <div ng-show="userForm.InsName.$invalid" ng-message="required">
+         Institute name is required.
+         </div>
+      </div>
     </md-input-container>
     <md-input-container>
       <label>Institute Location</label>
-      <input type="text" ng-model="User.InstituteLocation" />
+      <input name="InsLoc" type="text" ng-model="User.InstituteLocation" required />
+      <div ng-messages="userForm.InsLoc.$error">
+        <div ng-show="userForm.InsLoc.$invalid" ng-message="required">
+         Institute location is required.
+         </div>
+      </div>
     </md-input-container>
     <md-input-container>
       <label>GPA</label>
-      <input type="number" ng-model="User.GPA" step="any" />
+      <input name="GPA" type="number" ng-model="User.GPA" step="any" required />
+      <div ng-messages="userForm.GPA.$error">
+        <div ng-show="userForm.GPA.$invalid" ng-message="required">
+         GPA is required.
+         </div>
+      </div>
     </md-input-container>
     <md-input-container>
       <label>Graduation Date</label>
@@ -32,7 +57,14 @@
         md-placeholder="Enter date"
         md-mode="month"
         ng-model="User.Gdate"
+        name="Gdate"
+        required
       ></md-datepicker>
+      <div ng-messages="userForm.Gdate.$error">
+        <div ng-show="userForm.Gdate.$invalid" ng-message="required">
+         Graduation date is required.
+         </div>
+      </div>
     </md-input-container>
     <div layout="row" layout-align="center" >
         <md-button class="md-primary md-raised md-block margin-0" ng-click="submitData()">Submit</md-button>
