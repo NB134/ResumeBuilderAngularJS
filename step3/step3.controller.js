@@ -15,7 +15,7 @@ angular
       $timeout(function () {
         // $scope.$broadcast('someEvent', 'bidule');
         $rootScope.$broadcast("step3", $scope.User);
-      }, 100);
+      }, 1000);
       if (flag == 0) {
         $location.path("/step2");
       } else {

@@ -31,7 +31,7 @@ angular.module("ResumeBuilder").controller("step2", function($scope,$rootScope,$
         $timeout(function(){
             // $scope.$broadcast('someEvent', 'bidule');
             $rootScope.$broadcast("step2", $scope.User);
-         },100);
+         },1000);
          if(flag==0)
          {
             $location.path( "/" );    
