@@ -92,5 +92,11 @@ app.config(function ($routeProvider) {
     .when("/resume", {
       templateUrl: "./resumeView/resume.template.html",
       controller: "resume",
-    });
+    })
+    .when("/about",{
+      templateUrl:"about.template.html",
+    })
+    .when("/contact",{
+      templateUrl:"contact.template.html"
+    })
 });

@@ -2,13 +2,27 @@
 .md-nav-bar{
     height:auto;
     padding:1em;
+    background-color: #106cc8 !important;
+    
 }
 
 nav>ul>li>a>span{
     font-size:1.5em;
     padding:1.5em !important;
+    color:white !important;
+    
 }
-
+nav>ul>li>.md-active 
+{
+    background-color: #ff4081;
+    
+}
+nav>ul>li>a:active>span{
+    font-size:1.5em;
+    padding:1.5em !important;
+ 
+   
+}
 .stepNavContainer{
     width:80%;
     margin:2em auto;
