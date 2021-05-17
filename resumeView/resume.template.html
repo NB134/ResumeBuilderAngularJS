@@ -29,7 +29,7 @@
         <md-content>{{"GPA "+User.GPA}}</md-content>
     </div>
     <md-divider></md-divider>
-    <div class="Experience">
+    <div class="Experience" ng-if="User.Experience">
         <h1>Experience</h1>
         <md-content class="md-headline">{{User.Experience.designation}}</md-content>
         <md-content class="md-headline">{{User.Experience.Organisation}}</md-content>
@@ -37,7 +37,7 @@
             {{User.Experience.sDate | date:"MMM, yyyy"}} - {{User.Experience.eDate | date:"MMM, yyyy"}}
         </md-content>
     </div>
-    <md-divider></md-divider>
+    <md-divider ng-if="User.Experience"></md-divider>
     <div class="Projects">
         <h1>Projects</h1>
         <md-content class="md-headline">
@@ -49,7 +49,7 @@
         </md-content>
     </div>
     <md-divider></md-divider>
-    <div class="Achievements">
+    <div class="Achievements" ng-if="User.achievements">
         <h1>Achievements</h1>
         <span class="md-headline">
             {{User.achievements.title}}

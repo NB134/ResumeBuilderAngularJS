@@ -1,9 +1,6 @@
 <div class="Step1">
     <h1>Personal Details</h1>
-    <div class="controlSection" layout="row" layout-align="end center">
-       
-        <md-button class="md-raised md-primary" ng-click="submitData()">Next</md-button>
-    </div>
+    
     <form name="userForm" class="md-padding" novalidate layout="column" >
         <md-input-container>
             <label>Name</label>
@@ -33,8 +30,9 @@
                </div>
             </div>
           </md-input-container>
-          <div layout="row" layout-align="center">
-            <md-button class="md-primary md-raised md-block margin-0" ng-click="submitData()" >Submit</md-button>
-        </div>
+        <div class="controlSection" layout="row" layout-align="space-between center">
+          <md-button class="md-raised md-primary" ng-click="" ng-disabled="true">Back</md-button>
+          <md-button class="md-raised md-primary" ng-click="submitData()" ng-disabled="userForm.$invalid">Continue</md-button>
+      </div>
     </form>
 </div>

@@ -1,15 +1,41 @@
-/* Step Navigation */
-/* .stepNavContainer{
+
+.md-nav-bar{
+    height:auto;
+    padding:1em;
+}
+
+nav>ul>li>a>span{
+    font-size:1.5em;
+    padding:1.5em !important;
+}
+
+.stepNavContainer{
     width:80%;
-    margin:0 auto;
+    margin:2em auto;
 }
 .tab{
     cursor: pointer;
+    background: none;
+    border:none;
+}
+.tab:disabled{
+    cursor: not-allowed;
 }
 .tab>span>i{
     font-size: 5em;
-    color:rgb(194, 194, 194);
-} */
+    color:#3f51b5de;
+}
+.tabIconContainer .material-icons{
+    font-size: 5em !important;
+    color:#3f51b5de;
+}
+.tab:disabled{
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+.active>span>i{
+    color:#3f51b5;
+}
 .margin-0{
     margin:0;
 }
@@ -21,4 +47,18 @@ padding:2em;
 .group>.md-button{
 font-size: large;
 
+}
+.progress{
+    height:2px;
+    background-color: #3f51b5;
+    width:0;
+}
+.p-0{
+width:16.5%;
+}
+.p-50{
+    width:50%;
+}
+.p-100{
+    width:100%;
 }

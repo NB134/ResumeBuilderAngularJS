@@ -1,5 +1,5 @@
-angular.module("ResumeBuilder").controller("resume",function($scope,$timeout,$rootScope,$location){
-    $scope.User={};
+angular.module("ResumeBuilder").controller("resume",function($scope,$location,UserData){
+    $scope.User=UserData.data;
     $scope.dummyUser={
         "name": "Joyce Harrison",
         "number": 7181110011,
@@ -27,21 +27,4 @@ angular.module("ResumeBuilder").controller("resume",function($scope,$timeout,$ro
           "description": "Occaecat do dolore eu consectetur velit officia labore. Laboris dolor exercitation voluptate dolore nulla in excepteur culpa aliquip commodo labore est amet mollit. Enim commodo voluptate quis nisi deserunt nisi aute quis fugiat dolor ea veniam."
         }
       }
-    $scope.$on("step3",function(event, args)
-    {
-        console.log("hello");
-        $scope.User={...args};
-        console.log("updated user",$scope.User);
-    });
-
-    $scope.home=function(){
-        console.log($scope.User);
-        $timeout(function(){
-            // $scope.$broadcast('someEvent', 'bidule');
-            $rootScope.$broadcast("ClearData");
-         },100);
-          $location.path( "/!" );
-    }
-
-    
 });

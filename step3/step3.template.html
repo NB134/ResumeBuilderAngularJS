@@ -1,12 +1,15 @@
 <div class="Step3">
   <h1>Experience</h1>
-  <div class="controlSection" layout="row" layout-align="start center">
-    <md-button class="md-raised md-primary" ng-click="submitData(0)">Prev</md-button>
-  </div>
-  <form class="md-padding" novalidate  layout="column">
+ 
+  <form class="md-padding" novalidate layout="column">
     <div class="experienceContainer group">
       <md-content>Experience</md-content>
-      <div>
+      <md-input-container>
+        <md-checkbox ng-model="User.exp" aria-label="Checkbox 1">
+          Fresher
+        </md-checkbox>
+      </md-input-container>
+      <div ng-show="!User.exp">
         <md-input-container>
           <label> Designation </label>
           <input type="text" ng-model="User.Experience.designation" />
@@ -32,54 +35,61 @@
           ></md-datepicker>
         </md-input-container>
       </div>
-      <!-- <md-button class="md-fab md-primary md-mini margin-0" ng-click="AddField()">+</md-button> -->
     </div>
     <div class="projectsContainer group">
-        <md-content>Projects</md-content>
-        <div>
-            <md-input-container>
-              <label> Title </label>
-              <input type="text" ng-model="User.project.title"/>
-            </md-input-container>
-            <md-input-container>
-              <label> Description </label>
-              <textarea ng-model="User.project.description"></textarea>
-            </md-input-container>
-            <md-input-container>
-              <label>From </label>
-              <md-datepicker
-                ng-model="User.project.sDate"
-                md-placeholder="Enter date"
-                md-mode="month"
-              ></md-datepicker>
-            </md-input-container>
-            <md-input-container>
-              <label>To </label>
-              <md-datepicker
-                ng-model="User.project.eDate"
-                md-placeholder="Enter date"
-                md-mode="month"
-              ></md-datepicker>
-            </md-input-container>
-          </div>
-          <!-- <md-button class="md-fab md-primary md-mini margin-0" ng-click="AddField()">+</md-button> -->
+      <md-content>Projects</md-content>
+      <div>
+        <md-input-container>
+          <label> Title </label>
+          <input type="text" ng-model="User.project.title" />
+        </md-input-container>
+        <md-input-container>
+          <label> Description </label>
+          <textarea ng-model="User.project.description"></textarea>
+        </md-input-container>
+        <md-input-container>
+          <label>From </label>
+          <md-datepicker
+            ng-model="User.project.sDate"
+            md-placeholder="Enter date"
+            md-mode="month"
+          ></md-datepicker>
+        </md-input-container>
+        <md-input-container>
+          <label>To </label>
+          <md-datepicker
+            ng-model="User.project.eDate"
+            md-placeholder="Enter date"
+            md-mode="month"
+          ></md-datepicker>
+        </md-input-container>
+      </div>
     </div>
     <div class="achievementsContainer group">
-        <md-content>Achievements</md-content>
-        <div>
-            <md-input-container>
-              <label> Title </label>
-              <input type="text" ng.model="User.achievements.title" />
-            </md-input-container>
-            <md-input-container>
-              <label> Description </label>
-              <textarea ng-model="User.achievements.description"></textarea>
-            </md-input-container>
-          </div>
-          <!-- <md-button class="md-fab md-primary md-mini margin-0" ng-click="AddField()">+</md-button> -->
+      <md-content>Achievements</md-content>
+      <div>
+        <md-input-container>
+          <label> Title </label>
+          <input type="text" ng.model="User.achievements.title" />
+        </md-input-container>
+        <md-input-container>
+          <label> Description </label>
+          <textarea ng-model="User.achievements.description"></textarea>
+        </md-input-container>
+      </div>
     </div>
-    <div layout="row" layout-align="center" >
-        <md-button class="md-primary md-raised md-block margin-0" ng-click="submitData()">Submit</md-button>
+    <div class="controlSection" layout="row" layout-align="space-between center">
+      <md-button class="md-raised md-primary" ng-click="submitData(0)"
+        >Back</md-button
+      >
+      <md-button
+      class="md-primary md-raised md-block margin-0"
+      ng-click="submitData()"
+      ng-disabled="userForm.$invalid">Submit</md-button
+    >
     </div>
+    <!-- <div layout="row" layout-align="center">
+     
+    </div> -->
   </form>
 </div>
