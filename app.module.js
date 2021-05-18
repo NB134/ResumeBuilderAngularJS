@@ -2,16 +2,19 @@ let app = angular.module("ResumeBuilder", ["ngMaterial", "ngRoute"]);
 
 app.controller(
   "main",
-  function ($scope, $location, $rootScope, $route, UserData) {
+  function ($scope, $location, UserData) {
     $scope.tab2 = true;
     $scope.tab3 = true;
+    $scope.active="home";
     $scope.clicked = 1;
     $scope.stepDisplay = true;
     $scope.progress=0;
+
     $scope.Proceed = function () {
       UserData.reset();
       $scope.tab2 = true;
     $scope.tab3 = true;
+    $scope.active='home';
     $scope.clicked = 1;
     $scope.stepDisplay = true;
     $scope.progress=0;
@@ -35,6 +38,18 @@ app.controller(
         }
       } else {
         $scope.stepDisplay = false;
+        if(loc=="/")
+        {
+          $scope.active='home';
+        }
+        else if(loc=="/about")
+        {
+          $scope.active='about'
+        }
+        else if(loc=="/contact")
+        {
+          $scope.active='contact'
+        }
       }
     };
     $scope.navTab = function (step) {

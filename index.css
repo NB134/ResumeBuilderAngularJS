@@ -1,28 +1,32 @@
-
-.md-nav-bar{
-    height:auto;
-    padding:1em;
-    background-color: #106cc8 !important;
-    
+a{
+    text-decoration: none;
 }
-
-nav>ul>li>a>span{
-    font-size:1.5em;
-    padding:1.5em !important;
+nav{
+display: flex;
+font-size: 1.3em;;
+background-color: #3f51b5;
+}
+nav a{
     color:white !important;
-    
+    padding: 1.5em;
 }
-nav>ul>li>.md-active 
-{
-    background-color: #ff4081;
-    
+.navTabsContainer{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    gap:1em;
 }
-nav>ul>li>a:active>span{
-    font-size:1.5em;
-    padding:1.5em !important;
- 
-   
+.startView{
+    padding:1em;
 }
+nav.home .home,
+nav.team.team,
+nav.about .about,
+nav.contact .contact{
+	background-color:#5867E3;
+}
+
+
 .stepNavContainer{
     width:80%;
     margin:2em auto;
